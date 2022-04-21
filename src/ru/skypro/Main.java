@@ -72,18 +72,15 @@ public class Main {
         System.out.println(kakaha2.reverse());
     }
     public static void ermak(){
-        String str = "aabccddefgghiijjkk";
-        char[] carray = str.toCharArray();
-        System.out.println("строка " + str);
-        for (int i = 0; i < str.length(); i++) {
-            for (int j = i + 1; j < str.length(); j++) {
-                if (carray[i] == carray[j]) {
-                    System.out.print(carray[j] + " ");
-                    break;
-                }
+        String str = "abccddefgghiijjkk";
+        for (int i = 0; i < str.length()-1; i++) {
+            if (str.charAt(i) == str.charAt(i+1))
+            {
+                System.out.println("Дубли нашелся = "+  str.charAt(i));
+                return;
             }
+            System.out.println("Дублей нет");
         }
-
     }
 
     public static void main(String[] args) {
@@ -114,7 +111,6 @@ public class Main {
         // задача 5
         fapFap(); // я решил преобразовать массив в строку и далее строку в изменяемую строку и развернул массив
         // задача 4
-        ermak(); // нужна помощь в решении задачи, я не понимаю как мне с помощью цикла сказать что
-        // есть дубли да еще и показать какие ..............
+        ermak();
     }
 }
